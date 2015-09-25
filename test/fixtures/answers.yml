@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  reallife: false
+  movie: MyString
+  question_id: 
+
+two:
+  reallife: false
+  movie: MyString
+  question_id: 

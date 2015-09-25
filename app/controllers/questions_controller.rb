@@ -1,4 +1,7 @@
 class QuestionsController < ApplicationController
+
+  http_basic_authenticate_with name: "admin", password: "password", except: [:index, :show]
+
   def index
     @questions = Question.all
   end
@@ -44,6 +47,6 @@ class QuestionsController < ApplicationController
 
   private
     def question_params
-      params.require(:question).permit(:text, :reallife)
+      params.require(:question).permit(:text, :reallife, :movie)
     end
 end

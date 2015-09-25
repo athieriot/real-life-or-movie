@@ -1,0 +1,14 @@
+<%= form_for([@question, @question.answers.build]) do |f| %>
+  <p>
+    <%= f.label :reallife %><br>
+    <%= f.check_box :reallife %>
+  </p>
+  <p>
+    <%= f.label :movie %><br>
+    <%= f.text_field :movie %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+

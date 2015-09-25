@@ -1,0 +1,15 @@
+<p>
+  <strong>Real Life:</strong>
+  <%= answer.reallife %>
+</p>
+ 
+<p>
+  <strong>Movie:</strong>
+  <%= answer.movie %>
+</p>
+
+<p>
+  <%= link_to 'Destroy answer', [answer.question, answer],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>
