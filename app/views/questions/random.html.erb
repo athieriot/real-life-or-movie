@@ -1,3 +1,12 @@
-<h1>Real Life or Movie?</h1>
-
-<h4><% if @question %> <%= @question.text %> <% else %> No quizz yet <% end %></h4>
+<header>
+    <div class="header-content">
+        <div class="header-content-inner">
+            <h1><% if @question %> <%= @question.text %> <% else %> No quizz yet <% end %></h1>
+            <hr>
+            <p><% if @question %> <%= @question.movie %> <% else %>  <% end %></p>
+            <a href="#about" class="btn btn-primary btn-xl">Real Life</a>
+            <a href="#about" class="btn btn-success btn-xl">Movie</a>
+            <a href="#about" class="btn btn-info btn-xl pull-right">Skip</a>
+        </div>
+    </div>
+</header>
