@@ -1,9 +1,13 @@
 class QuestionsController < ApplicationController
 
-  http_basic_authenticate_with name: "admin", password: "password", except: [:index, :show]
+  http_basic_authenticate_with name: "admin", password: "password", except: [:index, :random, :show]
 
   def index
     @questions = Question.all
+  end
+
+  def random
+    @question = Question.all.sample
   end
 
   def show

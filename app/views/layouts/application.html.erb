@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>RealLifeorMovie</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	
+	<title>Real Life or Movie?</title> 
+	<meta name="description" content="Read stories and tell if it's real life or a movie" />	    
+	<meta name="keywords" content="stories, movie, life, quizz">
+	<meta property="og:title" content="Real Life or Movie?">
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
 
-<%= yield %>
+<body>
+			
+  <ul>
+    <li><%= link_to questions_random_path do %><span class="text">Quizz</span><% end %></li>
+    <li><%= link_to new_question_path do %></span> <span class="text">Add quizz</span><% end %></li>
+  </ul>
+	
+  <%= yield %>
+
+	<!-- SCRIPTS -->
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
 </body>
 </html>
