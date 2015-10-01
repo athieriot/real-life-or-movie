@@ -3,10 +3,18 @@
         <div class="header-content-inner">
             <h1><% if @question %> <%= @question.text %> <% else %> No quizz yet <% end %></h1>
             <hr>
-            <p><% if @question %> <%= @question.movie %> <% else %>  <% end %></p>
-            <a href="#about" class="btn btn-primary btn-xl">Real Life</a>
-            <a href="#about" class="btn btn-success btn-xl">Movie</a>
-            <a href="#about" class="btn btn-info btn-xl pull-right">Skip</a>
+
+            <%= form_for([@question, @question.answers.build], html: { id: "new_answer_reallife", style: "display: inline" }) do |f| %>
+              <%= f.hidden_field :reallife, :value => true %>
+              <%= f.submit 'Real Life', :class => 'btn btn-primary btn-xl' %>
+            <% end %>
+
+            <%= form_for([@question, @question.answers.build], html: { id: "new_answer_movie", style: "display: inline" }) do |f| %>
+              <%= f.hidden_field :reallife, :value => false %>
+              <%= f.submit 'Movie', :class => 'btn btn-success btn-xl' %>
+            <% end %>
+
+            <%= link_to 'Skip', root_path, class: 'btn btn-info btn-xl pull-right' %>
         </div>
     </div>
 </header>
