@@ -2,8 +2,8 @@
 
 one:
   text: MyText
-  reallife: false
+  movie: movie
 
 two:
   text: MyText
-  reallife: false
+  movie: movie
