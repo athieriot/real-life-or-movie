@@ -3,7 +3,7 @@
         <div class="header-content-inner">
             <h1 class="text-danger"><strong>Wrong :(<strong></h1>
             <hr>
-            <p>The correct answer was <strong><% if @question.movie %> <%= @question.movie %> <% else %> Real Life <% end %><strong></p>
+            <p>The correct answer was <strong><% if @question.movie? %> <%= @question.movie %> <% else %> Real Life <% end %><strong></p>
 
             <%= link_to 'Next', root_path, class: 'btn btn-info btn-xl pull-right' %>
         </div>
