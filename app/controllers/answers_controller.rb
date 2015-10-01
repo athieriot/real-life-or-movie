@@ -6,10 +6,10 @@ class AnswersController < ApplicationController
     @question = Question.find(params[:question_id])
     @answer = @question.answers.create(answer_params)
 
-    if @answer.reallife == @question.movie?
-      render :correct
-    else
+    if @question.movie? == @answer.reallife
       render :wrong
+    else
+      render :correct
     end
   end
 
