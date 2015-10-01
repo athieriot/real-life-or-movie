@@ -1,8 +1,9 @@
 <header>
     <div class="header-content">
         <div class="header-content-inner">
-            <h1 class="text-success"><strong>Correct !<strong></h1>
+            <h1 class="text-success"><i class="fa fa-check-circle-o fa-5x"></i></h1>
             <hr>
+            <p><% if @question.source? %> <%= link_to 'More informations', @question.source, :target => "_blank" %> <% end %></p>
 
             <%= link_to 'Next', root_path, class: 'btn btn-info btn-xl pull-right' %>
         </div>

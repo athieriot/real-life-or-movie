@@ -51,6 +51,6 @@ class QuestionsController < ApplicationController
 
   private
     def question_params
-      params.require(:question).permit(:text, :reallife, :movie)
+      params.require(:question).permit(:text, :movie, :source)
     end
 end

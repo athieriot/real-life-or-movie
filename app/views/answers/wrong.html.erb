@@ -1,9 +1,9 @@
 <header>
     <div class="header-content">
         <div class="header-content-inner">
-            <h1 class="text-danger"><strong>Wrong :(<strong></h1>
+            <h1 class="text-danger"><i class="fa fa-times-circle-o fa-5x"></i></h1>
             <hr>
-            <p>The correct answer was <strong><% if @question.movie? %> <%= @question.movie %> <% else %> Real Life <% end %><strong></p>
+            <p>The correct answer was <strong><% if @question.movie? %> <%= @question.movie %> <% else %> Real Life <% end %><strong> <%= link_to '(Source)', @question.source, :target => "_blank" %></p>
 
             <%= link_to 'Next', root_path, class: 'btn btn-info btn-xl pull-right' %>
         </div>

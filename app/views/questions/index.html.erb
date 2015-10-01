@@ -4,6 +4,7 @@
   <tr>
     <th>Text</th>
     <th>Movie</th>
+    <th>Source</th>
     <th colspan="3"></th>
   </tr>
  
@@ -11,6 +12,7 @@
     <tr>
       <td><%= question.text %></td>
       <td><%= question.movie %></td>
+      <td><%= question.source %></td>
       <td><%= link_to 'Show', question_path(question) %></td>
       <td><%= link_to 'Edit', edit_question_path(question) %></td>
       <td><%= link_to 'Destroy', question_path(question),
